@@ -8,6 +8,11 @@ This project builds a Generalized Linear Model (GLM) pricing engine on the **Fre
 
 - **Frequency model** — how often a policy is expected to file a claim
 - **Severity model** — how large each claim is expected to be, given that one occurs
+
+```
+Pure Premium = Predicted Frequency × Predicted Severity
+```
+
 ## Data
 
 - **Source:** OpenML `freMTPL2freq` (678,013 policies) and `freMTPL2sev` (26,639 individual claims)
@@ -33,9 +38,13 @@ Train/test split: 80/20.
 Python · pandas · statsmodels (GLM) · scikit-learn (data loading, metrics) · matplotlib
 
 ## Repository Structure
+
+```
 ├── insurance_pricing_glm.ipynb   # full analysis: data prep → frequency model → severity model → pure premium → evaluation → lift chart
-├── lift_chart.png                # decile lift chart validating risk ranking
+├── lift_chart.png      # decile lift chart validating risk ranking
 └── README.md
+```
+
 ## Notes
 
 Built on a public benchmark dataset (not proprietary insurer data) to demonstrate the frequency-severity GLM methodology used in real-world P&C ratemaking.
